@@ -1,0 +1,12 @@
+.card-panel{
+    border: 2px solid whitesmoke;
+    height: 500px;
+}
+.card-panel h5{
+    color: brown;
+}
+.card-panel .card-action{
+    margin-top: 40px;
+    border-top: 1px solid whitesmoke;
+    padding: 10px;
+}
