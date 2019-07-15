@@ -13,7 +13,7 @@ class RecipeList extends React.Component {
     async componentDidMount(){
         const APP_ID = 'b169101d';
         const APP_KEY = 'f768f690742f7e50cd246ac265334079';
-        const url = `https://api.edamam.com/search?q=burger&app_id=${APP_ID}&app_key=${APP_KEY}`;
+        const url = `https://api.edamam.com/search?q=tomatoes&app_id=${APP_ID}&app_key=${APP_KEY}`;
         
         const response = await fetch(url);
         const data = await response.json();
@@ -38,7 +38,7 @@ class RecipeList extends React.Component {
                                 </div>
                                 <h5>{recipe.recipe.label}</h5>
                                 <div className="card-action">
-                                    <p><b>Calories:</b> {recipe.recipe.calories.toString().slice(0,6)}</p>
+                                    <p><b style={{color: "#cc8e35"}}>Calories:</b> {recipe.recipe.calories.toString().slice(0,6)} cals</p>
                                 </div>
                 
                             </div>
@@ -58,9 +58,6 @@ class RecipeList extends React.Component {
             </div>
         )
     }
-
-
-
 }
 
 export default RecipeList

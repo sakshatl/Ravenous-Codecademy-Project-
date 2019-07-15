@@ -1,9 +1,13 @@
+h3{
+    color: #cc8e35;
+}
 .card-panel{
     border: 2px solid whitesmoke;
     height: 500px;
 }
 .card-panel h5{
-    color: brown;
+    color: #6d4c41;
+    font-weight: 500;
 }
 .card-panel .card-action{
     margin-top: 40px;
