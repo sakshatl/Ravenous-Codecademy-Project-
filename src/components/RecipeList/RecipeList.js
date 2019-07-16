@@ -27,11 +27,11 @@ class RecipeList extends React.Component {
 
 
     render(){
-
+        console.log(this.props.name)
         const recipeList = this.state.recipies ? (
-            this.state.recipies.map(recipe => {
+            this.state.recipies.map((recipe, index) => {
                 return(
-                        <div className="col m4 s12">
+                        <div key={index} className="col m4 s12">
                             <div className="card-panel z-depth-0">
                                 <div className="">
                                     <img className="responsive-img" src={recipe.recipe.image} height="200"  alt={recipe.recipe.label} />

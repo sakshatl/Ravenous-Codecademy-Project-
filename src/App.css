@@ -2,7 +2,7 @@ header {
     background-image: url('./ravenous-banner.jpg');
     background-position: center;
     background-size: cover;
-    height: 500px;
+    height: 400px;
 }
 nav.nav-wrapper {
     background-color: #cc8e35;
@@ -13,3 +13,32 @@ nav.nav-wrapper {
 .container{
     width: 85%;
 }
+
+form{
+    opacity: 0.9;
+    max-width: 600px;
+    padding: 40px;
+    margin: 50px auto;
+}
+form label{
+    font-size: 18px;
+    color: #3c3c3c;
+}
+form input::placeholder{
+    font-weight: bold;
+    color: grey;
+}
+form button{
+    display: block;
+    width: 50%;
+    
+}
+form button.btn{
+    background-color: #ffb142;
+    font-weight: bold;
+}
+form button.btn:hover{
+    background-color: #cc8e35;
+}
+
+
