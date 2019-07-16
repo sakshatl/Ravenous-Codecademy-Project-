@@ -6,28 +6,27 @@ class RecipeList extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            recipies : null
+            recipies : null,
         }
     }    
 
     async componentDidMount(){
-        const APP_ID = 'b169101d';
-        const APP_KEY = 'f768f690742f7e50cd246ac265334079';
-        const url = `https://api.edamam.com/search?q=tomatoes&app_id=${APP_ID}&app_key=${APP_KEY}`;
-        
-        const response = await fetch(url);
-        const data = await response.json();
-        console.log(data);
+            const APP_ID = 'b169101d';
+            const APP_KEY = 'f768f690742f7e50cd246ac265334079';
+            const url = `https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}`;
+            
+            const response = await fetch(url);
+            const data = await response.json();
 
-        this.setState({
-            recipies : data.hits.slice(0,6)
-        })
-    }
+            this.setState({
+                recipies : data.hits.slice(0,6)
+            })
+        }
 
 
 
     render(){
-        console.log(this.props.name)
+        console.log(this.state.query)
         const recipeList = this.state.recipies ? (
             this.state.recipies.map((recipe, index) => {
                 return(
@@ -45,15 +44,32 @@ class RecipeList extends React.Component {
                         </div>
                     )
             })
-        ) : (
-            <p className="center-align">no recipies found...</p>
-        ) 
+        ) : ( <p className="center-align">Loading recipes...</p> ) 
 
         return(
-            <div className="container">
-                <h3 className="center-align"><b>Recipes...</b></h3>
-                <div className="row">
-                    {recipeList}
+            <div>
+                <header>
+                    <nav className="nav nav-wrapper">
+                        <div className="container">
+                        <span className="brand-logo center">Ravenous</span>
+                        </div>
+                    </nav>
+                    <div className="container">
+                        <form action="" className="white z-depth-1 hoverable" onSubmit={this.handleSubmit}>
+                            <div className="input-field">
+                                <input type="text" name="query" placeholder="Enter a recipe query (e.g. Tomatoes, Potaoes or Pizza)" />
+                            </div>
+                            <div className="center">
+                                <button type="submit" className="btn z-depth-0">Search Recipes</button>
+                            </div>
+                        </form>
+                    </div>
+                </header>
+                <div className="container">
+                    <h3 className="center-align"><b>Recipes...</b></h3>
+                    <div className="row">
+                        {recipeList}
+                    </div>
                 </div>
             </div>
         )
