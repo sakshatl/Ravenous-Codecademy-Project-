@@ -6,29 +6,14 @@ class RecipeList extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            recipies : null,
+            
         }
     }    
 
-    async componentDidMount(){
-            const APP_ID = 'b169101d';
-            const APP_KEY = 'f768f690742f7e50cd246ac265334079';
-            const url = `https://api.edamam.com/search?q=chicken&app_id=${APP_ID}&app_key=${APP_KEY}`;
-            
-            const response = await fetch(url);
-            const data = await response.json();
-
-            this.setState({
-                recipies : data.hits.slice(0,6)
-            })
-        }
-
-
-
     render(){
-        console.log(this.state.query)
-        const recipeList = this.state.recipies ? (
-            this.state.recipies.map((recipe, index) => {
+        console.log(this.props.recipes)
+        const recipeList = this.props.recipes ? (
+            this.props.recipes.map((recipe, index) => {
                 return(
                         <div key={index} className="col m4 s12">
                             <div className="card-panel z-depth-0">
@@ -48,23 +33,6 @@ class RecipeList extends React.Component {
 
         return(
             <div>
-                <header>
-                    <nav className="nav nav-wrapper">
-                        <div className="container">
-                        <span className="brand-logo center">Ravenous</span>
-                        </div>
-                    </nav>
-                    <div className="container">
-                        <form action="" className="white z-depth-1 hoverable" onSubmit={this.handleSubmit}>
-                            <div className="input-field">
-                                <input type="text" name="query" placeholder="Enter a recipe query (e.g. Tomatoes, Potaoes or Pizza)" />
-                            </div>
-                            <div className="center">
-                                <button type="submit" className="btn z-depth-0">Search Recipes</button>
-                            </div>
-                        </form>
-                    </div>
-                </header>
                 <div className="container">
                     <h3 className="center-align"><b>Recipes...</b></h3>
                     <div className="row">
