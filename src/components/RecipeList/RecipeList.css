@@ -2,8 +2,28 @@
     padding: 50px;
 }
 
+.recipelist__content .MuiCard-root{
+    margin: 20px 0px;
+    box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, .1), 0 0 0 1px rgba( 10, 10, 10,.02);
+}
+
+.recipelist__content .MuiCard-root .MuiCardContent-root{
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.recipelist__content .MuiCard-root img {
+    border-radius: 10px;
+}
+
+.recipelist__content .MuiCard-root h4 {
+    /* margin-top: 30px; */
+}
+
 .recipelist__content > h3 {
     margin-top: 30px;
+    margin-bottom: 30px;
     font-size: 30px;
     color: #3c3c3c;
     font-weight: 600;
