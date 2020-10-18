@@ -1,0 +1,85 @@
+.header{
+  background: linear-gradient(0deg, rgba(0,0,0, 0.7), rgba(0, 0, 0, 0.7)), url("/img/header_banner.jpg");
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+}
+
+.header__navbar .MuiAppBar-root{
+  background: transparent;
+}
+
+.header__content {
+  padding-top: 100px;
+  text-align: center;
+}
+
+.header__content >  h2 {
+  font-size: 42px;
+  color: #ffffff;
+}
+
+.header__content > p {
+  margin-top: 30px;
+  font-size: 24px;
+  font-weight: 300;
+  color: white;
+}
+
+.header__search > form {
+  margin: 30px auto;
+  text-align: center;
+}
+
+.header__search > form > input.header__input{
+  width: 30%;
+  height: 52px;
+  padding: 0px 26px;
+  border: none;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  font-size: 16px;
+  box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, .1), 0 0 0 1px rgba( 10, 10, 10,.02);
+}
+
+.header__search > form > button.header__submit{
+  width: 10%;
+  height: 52px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 0px 26px;
+  line-height: 26px;
+  font-size: 16px;
+  border: none;
+  box-shadow: 0 0.5em 1em -0.125em rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.02);
+}
+
+.header__search > form > input.header__input:focus{
+  outline: none;
+}
+
+.header__search > form > button.header__submit:focus{
+  outline: none;
+}
+
+@media screen and (max-width : 600px){
+  .header__content >  h2 {
+    font-size: 36px;
+    color: #ffffff;
+  }
+
+  .header__content {
+    padding-top: 100px;
+    text-align: center;
+  }
+
+  .header__search > form > input.header__input{
+    width: 50%;
+    font-size: 14px;
+  }
+
+  .header__search > form > button.header__submit{
+    width: 30%;
+    font-size: 14px;
+  }
+}

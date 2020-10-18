@@ -1,0 +1,18 @@
+.suggestions{
+  margin-top: -75px;
+}
+
+.suggestions .MuiCard-root{
+  text-align: center;
+  box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, .1), 0 0 0 1px rgba( 10, 10, 10,.02);
+}
+
+.suggestions .MuiCard-root img {
+  height: 50px;
+}
+
+.suggestions .MuiCard-root h4{
+  font-size: 18px;
+  margin-top: 5px;
+  color: #3c3c3c;
+}

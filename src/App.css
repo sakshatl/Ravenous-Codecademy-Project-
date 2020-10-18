@@ -1,34 +1,8 @@
-header {
-    background-image: url('./ravenous-banner.jpg');
-    background-position: center;
-    background-size: cover;
-    height: 400px;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800&display=swap');
+
+*{
+    margin: 0;
+    font-size: 16;
+    font-family: "Montserrat";
 }
-nav.nav-wrapper {
-    background-color: #cc8e35;
-}
-.brand-logo{
-    font-weight: bold;
-}
-.container{
-    width: 85%;
-}
-form{
-    opacity: 0.9;
-    max-width: 600px;
-    padding: 40px;
-    margin: 50px auto;
-}
-form label{
-    font-size: 18px;
-    color: #3c3c3c;
-}
-form input::placeholder{
-    font-weight: bold;
-    color: grey;
-}
-button.btn{
-    background-color: #ffb142 !important;
-    font-weight: bold;
-    width: 50%;
-}
+
